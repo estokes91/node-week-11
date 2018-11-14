@@ -33,11 +33,11 @@ app.use((request, response, next) => {
 	next();
 });
 
-app.use((request, response, next) => {
-    response.render('maintenance.hbs', {
-    	time: new Date()
-    });
-});
+// app.use((request, response, next) => {
+//     response.render('maintenance.hbs', {
+//     	time: new Date()
+//     });
+// });
 
 app.get('/', (request, response) => {
 	response.send({
@@ -57,7 +57,6 @@ app.get('/info', (request, response) => {
 		welcome: 'Hello'
 	});
 });
-
 
 
 app.get('/404', (request, response) => {
